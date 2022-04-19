@@ -8,9 +8,14 @@ class Menu extends Phaser.Scene {
         this.load.audio('sfx_select', './assets/blip_select12.wav');
         this.load.audio('sfx_explosion', './assets/explosion38.wav');
         this.load.audio('sfx_rocket', './assets/rocket_shot.wav');
+        this.load.audio('mus_main', './assets/bassloop.wav');
+
     }
 
     create() {
+      //play music
+      this.sound.play('mus_main');
+
         // menu text configuration
         let menuConfig = {
             fontFamily: 'Courier',
@@ -41,7 +46,7 @@ class Menu extends Phaser.Scene {
         if (Phaser.Input.Keyboard.JustDown(keyLEFT)) {
           // Novice mode
           game.settings = {
-            spaceshipSpeed: 3,
+            spaceshipSpeed: 1,
             gameTimer: 60000    
           }
           this.sound.play('sfx_select');
@@ -50,7 +55,7 @@ class Menu extends Phaser.Scene {
         if (Phaser.Input.Keyboard.JustDown(keyRIGHT)) {
           // Expert mode
           game.settings = {
-            spaceshipSpeed: 4,
+            spaceshipSpeed: 2,
             gameTimer: 45000    
           }
           this.sound.play('sfx_select');
