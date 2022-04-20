@@ -1,3 +1,8 @@
+// name: noah eichler
+// title: RPMOD
+// 4.19.22
+// Project Time: 5 hrs.
+
 let config = {
     type: Phaser.CANVAS,
     width: 640,
